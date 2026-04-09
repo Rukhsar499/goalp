@@ -776,7 +776,7 @@ h2 {
 }
 
 .tab-slider .owl-nav .owl-prev span {
-    background: #BA4718;
+    background: #f9a825;
     display: block;
     width: 30px !important;
     height: 30px;
@@ -789,7 +789,7 @@ h2 {
 }
 
 .tab-slider .owl-nav .owl-next span {
-    background: #BA4718;
+    background: #f9a825;
     display: block;
     width: 30px !important;
     height: 30px;
@@ -1181,5 +1181,8 @@ height: 96%;
 }
 .mb {
     margin-bottom: 60px;
+}
+.form-header h2 {
+    font-size: 20px;
 }
 }
