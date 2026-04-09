@@ -70,6 +70,23 @@ a {
     gap: 60px;
     align-items: center;
 }
+.top-header {
+    background: #245839;
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+/* Marquee Animation */
+.marquee span {
+    display: inline-block;
+    padding: 10px 0;
+    animation: marquee 20s linear infinite;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
 
 .badge {
     display: inline-block;
@@ -416,36 +433,50 @@ h2 {
     box-shadow: 0 6px 10px rgba(0, 150, 136, 0.3);
 }
 /* circle background */
-.book::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    background: #faa61a;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-
-    transition: width 0.45s ease, height 0.45s ease;
+.book {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 8px;
+  background: #245839;
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.35s ease;
 }
 
-/* text always above */
-.book span {
-    position: relative;
-    z-index: 1;
-}
-
-.book:hover {
-    color: #fff;
-}
-
-/* hover animation */
 .book:hover::before {
-    width: 400px;
-    height: 400px;
+  transform: scaleX(1);
 }
+
+.book:hover .button-content {
+  color: #fff;
+}
+
+.button-content {
+  position: relative;
+  z-index: 3;
+}
+
+.book::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: #faa61a;
+  transition: all 0.475s;
+  z-index: 1;
+}
+
 
 .badges {
     display: inline-block;
@@ -788,7 +819,7 @@ h2 {
     box-shadow: 0 7px 20px rgba(0, 0, 0, 0.089);
     border-radius: 14px;
 }
-.course-card {
+/* .course-card {
     position: relative;
     padding: 30px 25px;
     border-radius: 18px;
@@ -799,7 +830,7 @@ h2 {
     overflow: hidden;
     transition: all .35s ease;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.06);
-}
+} */
 /* icon / text smooth effect */
 .prof-box h4,
 .prof-box1 h4 {
@@ -835,7 +866,7 @@ h2 {
 }
 
 .tab-slider {
-    background-color: #f4f9ffd2;
+    background-color: #cef8ce24;
     padding: 50px 0px;
 }
 
@@ -850,7 +881,7 @@ h2 {
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
-    background-color: #034DA2;
+    background-color: #245839;
 }
 
 .nav-link {

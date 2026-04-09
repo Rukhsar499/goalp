@@ -63,6 +63,19 @@ $(window).on('load', function() {
     
 });
 
+window.addEventListener("scroll", function () {
+    let topHeader = document.getElementById("topHeader");
+    let mainHeader = document.getElementById("mainHeader");
+
+    if (window.scrollY > 50) {
+        topHeader.style.display = "none";  // hide marquee
+        mainHeader.classList.add("fixed-header"); // fix header
+    } else {
+        topHeader.style.display = "block"; // show marquee
+        mainHeader.classList.remove("fixed-header"); // normal
+    }
+});
+
     
 
     
