@@ -63,6 +63,12 @@ a {
 .course-card ul li{
     padding-bottom: 10px;
 }
+.course-img img{
+    border-radius: 8px;
+}
+.course-card{
+    padding-right: 20px;
+}
 /* .course-card h5{
     font-size: 20px;
     margin-bottom: 30px;
