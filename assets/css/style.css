@@ -906,7 +906,7 @@ textarea.form-control-custom {
     }
 
     .main-title {
-        font-size: 2.8rem;
+        font-size: 34pxr;
     }
 
     .image-wrapper {
@@ -953,11 +953,19 @@ textarea.form-control-custom {
     }
 }
 
-@media (max-width: 767.98px) {
-    .styles-section {
-        padding: 60px 0;
-    }
-
+@media (max-width: 767px) {
+    .styles-title {
+  font-size: 30px;
+}
+.glass-form-card {
+    width:100%;
+}
+.feature-title {
+    font-size: 12px;
+}
+.b-r::after {
+    right: 13%;
+}
     .image-wrapper {
         height: 380px;
     }
@@ -967,6 +975,10 @@ textarea.form-control-custom {
     .col-lg-2-4 {
         flex: 0 0 auto;
         width: 20%;
+    }
+    .styles-section {
+        padding: 30px 0;
+        font-size: 30px !important;
     }
 }
 /* --- STICKY HEADER --- */
