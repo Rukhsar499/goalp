@@ -223,7 +223,7 @@ body {
 
 /* --- STYLES SECTION --- */
 .styles-section {
-    background-color: var(--bg-cream);
+    background-color: #fff;
     padding: 50px 0;
 }
 
@@ -256,7 +256,7 @@ body {
 .image-wrapper {
     position: relative;
     width: 100%;
-    height: 380px;
+    height: 300px;
     border-radius: 8px;
     overflow: hidden;
     background-color: #e5e0d8;
