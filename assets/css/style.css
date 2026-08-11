@@ -18,7 +18,7 @@
 body {
     font-family: var(--font-sans);
     color: var(--text-dark);
-    background-color: var(--bg-cream);
+    background-color: #fff;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
 }
@@ -509,6 +509,7 @@ body {
 .why-choose-section {
     background-color: var(--bg-cream);
     padding: 50px 0;
+    margin:20px 0px;
 }
 
 .section-title {
