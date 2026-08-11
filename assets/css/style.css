@@ -861,6 +861,7 @@ textarea.form-control-custom {
     width: 1px;
     background-color: #00000065;
 }
+
 .feature-desc {
     font-size: 0.92rem;
     line-height: 1.55;
@@ -879,7 +880,18 @@ textarea.form-control-custom {
     transform: translateY(-4px) scale(1.1);
     color: var(--primary-green);
 }
-
+.b-rr{
+    position: relative;
+}
+.b-rr::after {
+    content: '';
+    position: absolute;
+    top: 15%;
+    right: -6%;
+    height: 70%;
+    width: 1px;
+    background-color: #00000030;
+}
 /* --- RESPONSIVE ADJUSTMENTS --- */
 @media (max-width: 991.98px) {
     .bg-image-overlay {
@@ -1090,3 +1102,4 @@ textarea.form-control-custom {
             padding: 100px 0;
             text-align: center;
         }
+        
