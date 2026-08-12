@@ -41,7 +41,7 @@ body {
     right: 0;
     width: 70%;
     height: 100%;
-    background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1600&auto=format&fit=crop');
+    background-image: url('../img/ceebee-bnr.webp');
     background-size: cover;
     background-position: center left;
     /* Smooth fade from solid cream to visible photo */
@@ -162,7 +162,10 @@ body {
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
     border: 1px solid #ffffff;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
-    width:400px;
+    width: 400px;
+    position: absolute;
+    top: -4%;
+    right: -2%;
 }
 
 .glass-form-card:hover {
@@ -416,11 +419,11 @@ body {
 .philosophy-banner {
     position: relative;
     background-color: var(--bg-cream);
-    min-height: 280px;
+    /* min-height: 280px; */
     display: flex;
     align-items: center;
     overflow: hidden;
-    padding: 40px 0;
+    /* padding: 40px 0; */
 }
 
 /* Flush Left Image Container */
@@ -429,12 +432,14 @@ body {
     top: 0;
     left: 0;
     height: 100%;
-    width: 32%;
+    width: 100%;
     max-width: 480px;
     z-index: 1;
     overflow: hidden;
 }
-
+.phil{
+    padding:30px;
+}
 .left-image-container img {
     width: 100%;
     height: 100%;
@@ -502,6 +507,7 @@ body {
     color: #000;
     max-width: 620px;
     font-weight: 400;
+    margin-bottom: 0px;
 }
 
 /* --- WHY CHOOSE US SECTION --- */
@@ -780,7 +786,14 @@ textarea.form-control-custom {
 textarea.form-control-custom {
     height: 90px;
 }
-
+.philosophy-image-container img {
+    position: absolute;
+    top: 10%;
+    bottom:0;
+    right: 10%;
+    width: 52%;
+    
+}
 /* --- 5 COLUMN GRID CLASS --- */
 @media (min-width: 992px) {
     .col-lg-2-4 {
