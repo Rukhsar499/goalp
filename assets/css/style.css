@@ -983,6 +983,41 @@ textarea.form-control-custom {
     .image-wrapper {
         height: 380px;
     }
+    .glass-form-card {
+    
+    position: relative;
+    top: 0%;
+    right: 0%;
+}
+.main-heading {
+font-size: 24px;
+}
+.phil {
+    padding: 10px;
+}
+.philosophy-image-container img {
+    position: relative;
+    top: 0%;
+    bottom: -48px;
+    right: -0%;
+    width: 81%;
+}
+.b-rr::after {
+    content: '';
+    position: absolute;
+    top: 65%;
+    bottom: 43%;
+    height: 90%;
+    width: 1px;
+    left:50%;
+    background-color: #00000030;
+    transform: rotate(90deg);
+}
+.brand-logo img{
+  width:90px;
+}
+.lead-gen-section {
+padding: 30px 0;}
 }
 
 @media (min-width: 992px) {
