@@ -1019,7 +1019,140 @@ font-size: 24px;
 .lead-gen-section {
 padding: 30px 0;}
 }
+/* ==========================================================================
+   Modern Eyecatching Mobile Sticky Footer Bar
+   ========================================================================== */
 
+.mobile-sticky-footer {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-sticky-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 24px);
+    max-width: 480px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15), 0 2px 6px rgba(0, 0, 0, 0.05);
+    padding: 8px;
+    z-index: 99999;
+    gap: 8px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+  }
+
+  .sticky-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 8px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+
+  /* SVG Icon Sizing */
+  .sticky-btn .icon-wrap {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sticky-btn svg {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+  }
+
+  /* Vibrant Gradient Colors */
+  .btn-call {
+    background: linear-gradient(135deg, #2D3A2A 0%, #1A2318 100%);
+    box-shadow: 0 4px 12px rgba(45, 58, 42, 0.25);
+  }
+
+  .btn-whatsapp {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+  }
+
+  .btn-enquiry {
+    background: linear-gradient(135deg, #D4AF37 0%, #AA7C11 100%);
+    box-shadow: 0 4px 12px rgba(170, 124, 17, 0.3);
+  }
+
+  /* Shiny Sweep Light Hover Effect */
+  .sticky-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      90deg, 
+      transparent, 
+      rgba(255, 255, 255, 0.4), 
+      transparent
+    );
+    transform: skewX(-20deg);
+    transition: left 0.6s ease;
+  }
+
+  /* Interactive Hover & Tap Effects */
+  .sticky-btn:hover::after,
+  .sticky-btn:active::after {
+    left: 150%;
+  }
+
+  .sticky-btn:hover, 
+  .sticky-btn:active {
+    transform: translateY(-3px) scale(1.02);
+  }
+
+  .sticky-btn:hover svg {
+    transform: scale(1.15) rotate(-5deg);
+  }
+
+  /* Multi-Ring Pulse Animation for WhatsApp */
+  .pulse {
+    animation: double-pulse 2s infinite;
+  }
+
+  @keyframes double-pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6), 0 4px 12px rgba(37, 211, 102, 0.35);
+    }
+    70% {
+      box-shadow: 0 0 0 12px rgba(37, 211, 102, 0), 0 4px 12px rgba(37, 211, 102, 0.35);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 4px 12px rgba(37, 211, 102, 0.35);
+    }
+  }
+
+  /* Padding adjustment for page content */
+  body {
+    padding-bottom: 75px;
+  }
+}
 @media (min-width: 992px) {
     .col-lg-2-4 {
         flex: 0 0 auto;
