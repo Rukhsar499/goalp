@@ -971,9 +971,7 @@ textarea.form-control-custom {
     .styles-title {
   font-size: 30px;
 }
-.glass-form-card {
-    width:100%;
-}
+
 .feature-title {
     font-size: 12px;
 }
@@ -1296,4 +1294,28 @@ padding: 30px 0;}
             padding: 100px 0;
             text-align: center;
         }
+        .btn-close{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    border: 1px solid #293829;
+    width: 10px;
+    height: 10px;
+    border-radius:50%;
+    padding:10px;
+        }
+@media (max-width: 1600px){
+ .glass-form-card{
+     right: 1% !important;
+ } 
+.ingoa{
+    padding-left:30px;
+}
+.image-wrapper {
+  height: 250px;
+}
+.main-heading {
+    font-size: 34px;
+}
+}
         
