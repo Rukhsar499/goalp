@@ -76,6 +76,55 @@ window.addEventListener("scroll", function () {
     }
 });
 
+(function () {
+    const slider = document.querySelector('[data-testimonial-slider]');
+    if (!slider) return;
+
+    const track = slider.querySelector('.testimonial-track');
+    const slides = Array.from(slider.querySelectorAll('.testimonial-slide'));
+    const dots = Array.from(slider.parentElement.querySelectorAll('.testimonial-dot'));
+    const prevBtn = slider.querySelector('.testimonial-nav.prev');
+    const nextBtn = slider.querySelector('.testimonial-nav.next');
+    let currentIndex = 0;
+
+    const getVisibleSlides = () => window.innerWidth < 768 ? 1 : 2;
+
+    const updateSlider = () => {
+        const visibleSlides = getVisibleSlides();
+        const maxIndex = Math.max(0, slides.length - visibleSlides);
+        currentIndex = Math.min(currentIndex, maxIndex);
+
+        const slideGap = 24;
+        const slideWidth = slides[0].getBoundingClientRect().width + slideGap;
+        track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    };
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = Math.max(0, currentIndex - 1);
+        updateSlider();
+    });
+
+    nextBtn.addEventListener('click', () => {
+        const maxIndex = Math.max(0, slides.length - getVisibleSlides());
+        currentIndex = Math.min(maxIndex, currentIndex + 1);
+        updateSlider();
+    });
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentIndex = index;
+            updateSlider();
+        });
+    });
+
+    window.addEventListener('resize', updateSlider);
+    updateSlider();
+})();
+
     
 
     
